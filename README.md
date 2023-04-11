@@ -1,4 +1,6 @@
 # Using SSH with GitHub
+
+## Directory Reaction
 ![Alt text](ssh_pics/Picture1.png "To make Folder")
 
 We create a folder called `.ssh` which we will use to store our keys.
@@ -6,6 +8,7 @@ Using the function `mkdir` it allows us to create this directory which we will c
 We use `ls` to explore the current directory, and use `cd` along with the directory name we wish to travel to.
 In this case we use `cd.ssh`
 
+## Keygen Creation
 ![Alt text](ssh_pics/Picture2.png "Create Keygen")
 
 We use `ssh-keygen -t rsa -b 4096 -C "<your email address>"`.
@@ -15,12 +18,14 @@ Pressing enter when it asks for passphrase just lets us skip the passphrase sect
 to add a passphrase please do so.
 Once done we can see it shows our key being saved to our directory.
 
+## Viewing Public Keys
 ![Alt text](ssh_pics/Picture3.png "View Public Key")
 
 Using `cat name-github-key.pub`. We use `.pub` as two keys are generated since the last step.
 This can be confimred by using `ls` in the key directory which will give us back two keys.
 The `cat` will allow us to read the file, and in this case the key and it will give us our public key, which we can see above.
 
+## Navigating GitHub 
 ![Alt text](ssh_pics/Picture4.png "SSH KEY ON GITHUB")
 
 On GitHub, navigate to profile settings, SSH keys, and click the red box you can see in the diagram above.
@@ -33,6 +38,8 @@ it was name-github-key.pub.
 In the Key section, copy and paste the key from `ssh-rsa...` just under the `cat` command as in the above picture.
 Once pasted in, add the SSH key.
 
+## Private Keys and Authentication
+
 ![Alt text](ssh_pics/Picture6.png "Private Key")
 
 Once the public key has been added, we use:
@@ -42,6 +49,8 @@ The code above starting with `eval...`.
 Once entered use: `ssh-add name-github-key`. This time we use our Private Key as we didn't use `.pub` at the end.
 
 We now use `ssh -T git@github.com` to check if it is authenticated.
+
+## Creating the Repository (Local and Remote)
 
 ![Alt text](ssh_pics/Picture7.png "Create Repo")
 
@@ -76,6 +85,8 @@ Once edits have been made to the README, we initialse a git repository using `gi
 Using `git status` check if the file is untracked, if so we use `git add .` to add everything that is untracked.
 
 Following this we must use `git commit -m "xxxxx"` to state changes made.
+
+## Pushing the Repository to GitHub
 
 ![Alt text](ssh_pics/Picture13.png "Pusher")
 
