@@ -44,7 +44,8 @@ Once pasted in, add the SSH key.
 
 Once the public key has been added, we use:
 
-The code above starting with `eval...`.
+The code above starting with `eval...`. `eval` takes the string as an argument and executes it as a command line.
+`ssh-agent -s` launches the agent and outputs the commands. The backticks allow for bash to execute the command and allows for the use of `eval`.
 
 Once entered use: `ssh-add name-github-key`. This time we use our Private Key as we didn't use `.pub` at the end.
 
@@ -73,8 +74,8 @@ In accordance with the repository, we also create a local repository under `test
 Doing both `cd` `ls` help us see if any files were created. As we can see above nothing else was created.
 
 Using `touch README.md`, it lets us create a README file within this respoitory.
-` cat README.md` lets us explore the contents.
-`nano README.md` lets us edit the README.md contents through Git Bash itself, which we can see below.
+` cat README.md` - `cat` is a command that is used to concatenate and display the contents of one or more files, and in this case we use it to display the `README.md`.
+`nano README.md` - lets us edit the README.md contents through Git Bash itself, which we can see below.
 
 ![Alt text](ssh_pics/Picture11.png "Nano")
 
