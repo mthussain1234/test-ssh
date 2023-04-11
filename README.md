@@ -65,7 +65,7 @@ Doing both `cd` `ls` help us see if any files were created. As we can see above 
 
 Using `touch README.md`, it lets us create a README file within this respoitory.
 ` cat README.md` lets us explore the contents.
-`nano README.md` lets us edit the README.md contents through Git Bash itself, whcih we can see below.
+`nano README.md` lets us edit the README.md contents through Git Bash itself, which we can see below.
 
 ![Alt text](ssh_pics/Picture11.png "Nano")
 
