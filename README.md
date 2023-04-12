@@ -1,6 +1,6 @@
 # Using SSH with GitHub
 
-## Directory Reaction
+## Directory Creation
 ![Alt text](ssh_pics/Picture1.png "To make Folder")
 
 We create a folder called `.ssh` which we will use to store our keys.
